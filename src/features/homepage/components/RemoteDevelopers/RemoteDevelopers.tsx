@@ -1,14 +1,13 @@
+/* eslint-disable react/jsx-key */
 import React from "react";
-import headingImage from "../../../../assets/placeholder_image_headline.jpeg";
+import headingImage from "../../../../assets/placeholder_image_headline.jpg";
 import {
   Container,
   Grid,
   Typography,
   Card,
-  CardMedia,
   CardContent,
   Avatar,
-  ListItemButton,
   ListItemText,
   ListItem,
   List,
@@ -23,8 +22,8 @@ const RemoteDevelopers = () => {
   }
   const SmallCard = ({ title, data }: MessageProps) => {
     return (
-      <Box >
-        <Grid item xs={12} md={11}  >
+      <Box>
+        <Grid item xs={12} md={11}>
           <Card
             sx={{
               maxWidth: 400,
@@ -32,7 +31,6 @@ const RemoteDevelopers = () => {
               borderRadius: 6,
               marginTop: 5,
               minHeight: 320,
-              
             }}
           >
             ;
@@ -52,6 +50,7 @@ const RemoteDevelopers = () => {
                 }}
               >
                 {data.map((item) => (
+                  // eslint-disable-next-line react/jsx-key
                   <ListItem
                     sx={{
                       display: "list-item",
@@ -72,7 +71,7 @@ const RemoteDevelopers = () => {
 
   const MediumCard = ({ title, data }: MessageProps) => {
     return (
-      <Box >
+      <Box>
         <Grid item xs={12} md={11}>
           <Card
             sx={{
@@ -120,7 +119,7 @@ const RemoteDevelopers = () => {
     );
   };
   return (
-    <Container maxWidth="lg">
+    <Container maxWidth="xl">
       <Grid
         container
         direction="column"
@@ -131,6 +130,7 @@ const RemoteDevelopers = () => {
         <Container
           sx={{
             marginBottom: 10,
+            marginTop: 10,
           }}
         >
           <Typography variant="h4" align="center">
@@ -146,7 +146,6 @@ const RemoteDevelopers = () => {
             columnSpacing={3}
             alignContent="center"
             justifyContent="center"
-            
           >
             <SmallCard
               title="Tailored to your requirements"

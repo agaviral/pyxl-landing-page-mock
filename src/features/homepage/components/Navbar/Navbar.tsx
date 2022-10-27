@@ -1,16 +1,16 @@
 import React from "react";
-import { Box, AppBar, IconButton, Toolbar, Typography, Container, useTheme, Grid } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
-import logo from '../../../../assets/pyxl_logo_seagreen.png';
+import { Box, AppBar, Toolbar, Container, useTheme, Grid } from "@mui/material";
+import logo from "../../../../assets/pyxl_logo_seagreen.png";
 import PrimaryButton from "../Button/PrimaryButton";
-
-
 
 function Navbar() {
   const theme = useTheme();
   return (
     <div>
-      <AppBar position="fixed" sx={{ backgroundColor: theme.colorConstants.bgColor }}>
+      <AppBar
+        position="fixed"
+        sx={{ backgroundColor: theme.colorConstants.bgColor }}
+      >
         <Container maxWidth="lg">
           <Toolbar disableGutters>
             <Grid
@@ -30,7 +30,7 @@ function Navbar() {
           </Toolbar>
         </Container>
       </AppBar>
-    </div >
+    </div>
   );
 }
 

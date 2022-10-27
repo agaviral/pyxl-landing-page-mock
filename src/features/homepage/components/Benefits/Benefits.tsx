@@ -1,10 +1,14 @@
 import React from "react";
-import { Box, Container, Typography, Grid, Card } from "@mui/material";
+import { Container, Typography, Grid, Card, useTheme } from "@mui/material";
 import PublicIcon from "@mui/icons-material/Public";
 
 const Benefits = () => {
+  const theme = useTheme();
   return (
-    <Container maxWidth="md">
+    <Container
+      maxWidth="xl"
+      sx={{ background: theme.colorConstants.bgBlueColor }}
+    >
       <Grid
         container
         direction="column"
@@ -26,8 +30,7 @@ const Benefits = () => {
           direction="row"
           justifyContent="center"
           alignItems="center"
-       
-          maxWidth='md'
+          maxWidth="md"
           marginTop={10}
           gap={10}
         >

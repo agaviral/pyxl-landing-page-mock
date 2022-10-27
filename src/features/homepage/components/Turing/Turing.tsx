@@ -1,7 +1,14 @@
-import { Box, Card, Container, Grid, Typography } from "@mui/material";
+import {
+  Card,
+  Container,
+  Grid,
+  Typography,
+  useTheme,
+} from "@mui/material";
 import React from "react";
 
 const Turing = () => {
+  const theme = useTheme();
   interface MessageProps {
     heading: string;
     stats: string;
@@ -43,15 +50,17 @@ const Turing = () => {
     );
   };
   return (
-    <Container maxWidth="lg">
+    <Container
+      maxWidth="xl"
+      sx={{ background: theme.colorConstants.bgGrayColor }}
+    >
       <Grid
         container
         justifyContent="center"
         alignContent="center"
         textAlign="center"
-        sx={{ minHeight: "100vh"}}
+        sx={{ minHeight: "100vh" }}
         marginTop="5%"
-        
       >
         <Typography variant="h4">Why businesses choose Turing</Typography>
         <Grid container spacing={2}>
